@@ -66,6 +66,16 @@ export const initializeRepositoryIssues = (repo) => {
     };
 }
 
+export const CLEAR_REPOSITORIES = 'CLEAR_REPOSITORIES';
+
+export const clearRepositories = () => {
+    return (dispatch, getState) => {
+        dispatch({
+            type: CLEAR_REPOSITORIES
+        });
+    };
+}
+
 export const createRepositoryWebhook = (repo) => {
     return (dispatch, getState) => {
         // TODO

@@ -1,10 +1,17 @@
 import * as React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { clearRepositories } from '../actions/repositories';
 import { addRepository, removeRepository, updateConfig } from '../actions/config';
 import SetupForm from '../forms/setup';
 
 class Setup extends React.Component {
+
+    updateConfig(config) {
+        this.props.actions.clearRepositories();
+        this.props.actions.updateConfig(config);
+    }
+
     render() {
         return (
             <div>
@@ -12,7 +19,7 @@ class Setup extends React.Component {
                     actions={{
                         addRepository: this.props.actions.addRepository,
                         removeRepository: this.props.actions.removeRepository,
-                        updateConfig: this.props.actions.updateConfig
+                        updateConfig: ::this.updateConfig
                     }}
                     defaultValues={this.props.config}
                 />
@@ -31,6 +38,7 @@ export default connect(
         return {
             actions: bindActionCreators({
                 addRepository,
+                clearRepositories,
                 removeRepository,
                 updateConfig
             }, dispatch)

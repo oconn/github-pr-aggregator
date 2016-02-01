@@ -34,6 +34,8 @@ const repositoriesReducer = (state = {}, action) => {
             ),
             state
         );
+    case actionTypes.CLEAR_REPOSITORIES:
+        return {};
     default:
         return state;
     }
