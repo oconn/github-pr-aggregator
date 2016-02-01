@@ -76,7 +76,7 @@ export default class SetupForm extends React.Component {
 
                 <label>Github API Token *</label>
 
-                <p>Add your github api token. Generate this by visiting <a href="https://github.com/settings/tokens" target="_blank">your settings page</a>. This will only be stored locally in localStorage and will be passed as a query parameter with every required github API request. To remove from localStorage, use dev tools or type <strong>localStorage.clear()</strong> in the dev console.</p>
+                <p>Add your github api token. Generate this by visiting <a href="https://github.com/settings/tokens" target="_blank">your settings page</a>. This will only be stored locally in localStorage and will be passed as a query parameter with every authenicated github API request. To remove from localStorage, use dev tools or type <strong>localStorage.clear()</strong> in the dev console.</p>
 
                 <Input type="password"
                     name="githubAPIToken"
