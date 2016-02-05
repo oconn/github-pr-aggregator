@@ -8,8 +8,11 @@ The Github PR Aggregator allows you to view all Pull Requests from selected repo
 - Show comment count
 
 #### Install
+
 1) `git clone https://github.com/oconn/github-pr-aggregator.git`
+
 2) `npm install`
+
 3) npm run start
 
 
