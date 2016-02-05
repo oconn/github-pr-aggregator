@@ -13,6 +13,6 @@ The Github PR Aggregator allows you to view all Pull Requests from selected repo
 
 2) `npm install`
 
-3) npm run start
+3) `npm run start`
 
 
